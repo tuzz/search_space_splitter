@@ -172,4 +172,16 @@ describe SearchSpaceSplitter do
     ]
   end
 
+  it 'totals the size of the search space' do
+    search = [1..3, 1..5, 1..7, -4..11, 21..29, -11..-2]
+    splits = klass.split(search, :into => 23)
+
+    size = lambda { |r| r.map(&:count).inject(:*) }
+
+    search_size = size[search]
+    splits_size = splits.map(&size).inject(:+)
+
+    search_size.should == splits_size
+  end
+
 end
