@@ -8,6 +8,12 @@ describe SearchSpaceSplitter do
     expect { klass.split([]) }.to_not raise_error
   end
 
+  it 'returns a nested array for n = 1' do
+    klass.split([1..5], :into => 1).should == [
+      [1..5]
+    ]
+  end
+
   it 'splits a search space in two by default' do
     klass.split([1..4]).should == [
       [1..2],

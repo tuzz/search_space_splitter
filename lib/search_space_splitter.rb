@@ -6,7 +6,7 @@ class SearchSpaceSplitter
     into = params[:into] || 2
 
     atomic = ranges.all? { |r| r.count == 1 }
-    return ranges if into == 1 || atomic
+    return [ranges] if into == 1 || atomic
 
     ri = ranges.each_with_index
     divisible = lambda { |c| (into % c).zero? || (c % into).zero? }
