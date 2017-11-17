@@ -49,9 +49,3 @@ SearchSpaceSplitter.split([1..3, 1..4, 1..5], :into => 11)
 SearchSpaceSplitter.split([1..2], :into => 999)
 #=> [[1..1], [2..2]]
 ```
-
-## Contribution
-
-Feel free to contribute. No commit is too small.
-
-You should follow me: [@cpatuzzo](https://twitter.com/cpatuzzo)
