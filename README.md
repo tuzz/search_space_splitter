@@ -8,7 +8,7 @@ Splits a search space into n pieces.
 Splits a search space, represented by an array of ranges, into similarly sized sections.
 
 ```ruby
-require 'search_splace_splitter'
+require 'search_space_splitter'
 
 SearchSpaceSplitter.split([1..2, 1..3])
 #=> [[1..1, 1..3], [2..2, 1..3]]
